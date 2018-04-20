@@ -3,3 +3,18 @@ find
 查找路径：指定具体目标路径；默认为当前目录 
 查找条件：指定的查找标准，可以文件名、大小、类型、权限等标准进行；默认为找出指定路径下的所有文件
 处理动作：对符合条件的文件做操作，默认输出至屏幕
+
+date 显示时间
+
+CentOS 7查看系统版本及查看机器位数x86-64
+uname -a
+file /bin/ls
+cat /proc/version
+getcong LONG_BIT
+查看系统版本
+cat /etc/os-release
+cat /etc/redhat-release
+rpm -q centos-release
+查看内核版本
+cat /proc/version
+uname -a
