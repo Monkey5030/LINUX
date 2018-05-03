@@ -18,3 +18,36 @@ rpm -q centos-release
 查看内核版本
 cat /proc/version
 uname -a
+
+修改CentOS默认yum源为mirrors.163.com
+1、首先备份系统自带yum源配置文件/etc/yum.repos.d/CentOS-Base.repo
+[root@localhost ~]# mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+2、进入yum源配置文件所在的文件夹
+[root@localhost ~]# cd /etc/yum.repos.d/
+3、下载163的yum源配置文件到上面那个文件夹内
+CentOS7
+[root@localhost yum.repos.d]# wget http://mirrors.163.com/.help/CentOS7-Base-163.repo
+CentOS6
+[root@localhost yum.repos.d]# wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
+CentOS5
+[root@localhost yum.repos.d]# wget http://mirrors.163.com/.help/CentOS5-Base-163.repo
+4、运行yum makecache生成缓存
+[root@localhost yum.repos.d]# yum makecache
+5、这时候再更新系统就会看到以下mirrors.163.com信息
+[root@localhost yum.repos.d]# yum -y update
+已加载插件：fastestmirror, refresh-packagekit, security
+设置更新进程Loading mirror speeds from cached hostfile
+* base: mirrors.163.com
+* extras: mirrors.163.com
+* updates: mirrors.163.com
+
+linux下彻底删除mysql数据库
+
+查询mysql文件 
+1.#rpm -qa | grep mysql 
+2.这时候你输入选择下面一种 
+[root@xiaoluo ~]# rpm -e mysql　　// 普通删除模式 
+[root@xiaoluo ~]# rpm -e –nodeps mysql　　// 强力删除模式，如果使用上面命令删除时，提示有依赖的其它文件，则用该命令可以对其进行强力删除 
+3.经过上述操作后，再次执行 #rpm -qa | grep mysql 这时你会发现有可能还是有文件例如：libs，service等 如下： 
+4，这时候你就需要执行如下操作 
+[root@data lib]# yum remove mysql mysql-server mysql-libs compat-mysql51 
