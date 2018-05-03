@@ -51,3 +51,5 @@ linux下彻底删除mysql数据库
 3.经过上述操作后，再次执行 #rpm -qa | grep mysql 这时你会发现有可能还是有文件例如：libs，service等 如下： 
 4，这时候你就需要执行如下操作 
 [root@data lib]# yum remove mysql mysql-server mysql-libs compat-mysql51 
+
+centos7 yum安装mysql http://www.jb51.net/article/124518.htm
