@@ -1,6 +1,6 @@
 1.先把仓库中的文件拉到本地
 git clone https://github.com/Monkey5030/SQL-Server.git
-
+https://github.com/Monkey5030/LINUX/blob/master/picture/pull.png
 2.进入文件目录，执行删除操作
 git rm <file>
 
