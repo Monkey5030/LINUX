@@ -12,5 +12,5 @@ git commit -m "备注"
 
 5.将本地内容推送到远程仓库
 git push
-https://github.com/Monkey5030/LINUX/blob/master/picture/push.png
+![image]https://github.com/Monkey5030/LINUX/blob/master/picture/push.png
 6.刷新github仓库，可以看到选定的文件没有了
