@@ -129,3 +129,13 @@ https://man.linuxde.net/sed
 sed 's/book/books/' file
 全面替换标记g
 sed 's/book/books/g' file
+
+要在sed 命令行上执行多个命令时，只要用-e 选项就可以了。
+ sed -e 's/xiu/秀/g;s/i/李国印/' t03.txt
+从文件中读取编辑器命令
+$ cat script1.sed
+s/brown/green/
+s/fox/elephant/
+s/dog/cat/
+$
+$ sed -f script1.sed data1.txt
