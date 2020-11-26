@@ -22,3 +22,12 @@ cat catalina.log | grep   '2017-09-06 15:15:42' > test.log
 
 5 实时监控文件输出
 tail -f catalina.out
+
+
+使用sed命令
+删除第一行
+sed -i '1d' filename
+删除第n行
+sed -i 'nd' filename
+删除最后一行
+sed -i '$d' filename
