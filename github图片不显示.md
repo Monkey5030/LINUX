@@ -1,5 +1,6 @@
 # 修改hosts  
 * 文件地址  C:\Windows\System32\drivers\etc\hosts  
+* 在文件末尾添加：
 ```
 # GitHub Start 
 192.30.253.112    Build software better, together 
